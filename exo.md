@@ -3,6 +3,7 @@ Réaliser une application en ASP.NET pour manipuler une base de donnée. \
 Utilisation de EFCore pour : 
 - Mise en place la base de donnée en code first.
 - Utilisation de la base de donnée avec LinQ.
+- (Optionnel) Faire le visuel de l'application.
 
 ## Schema de la base de donnée
 ![SchemaDB](./schema_db.png)
