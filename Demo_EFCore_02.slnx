@@ -1,6 +1,8 @@
 <Solution>
   <Folder Name="/Éléments de solution/">
+    <File Path="exo.md" />
     <File Path="readme.md" />
+    <File Path="schema_db.png" />
   </Folder>
   <Project Path="Demo_EFCore_02.DAL/Demo_EFCore_02.DAL.csproj" />
   <Project Path="Demo_EFCore_02/Demo_EFCore_02.csproj" />
