@@ -56,6 +56,28 @@ namespace Demo_EFCore_02.DAL.Migrations
                         .HasDatabaseName("IDX_Players_Name");
 
                     b.ToTable("Players", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            FirstName = "Della",
+                            LastName = "Duck",
+                            Pseudo = "MoonDuck"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            FirstName = "Balthazar",
+                            LastName = "Picsou"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            FirstName = "Zaza",
+                            LastName = "Vanderquack",
+                            Pseudo = "TacticalPancake"
+                        });
                 });
 #pragma warning restore 612, 618
         }

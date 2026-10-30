@@ -40,6 +40,19 @@ namespace Demo_EFCore_02.DAL.Configs
             builder.HasIndex(p => new { p.FirstName, p.LastName })
                    .IsUnique()
                    .HasDatabaseName("IDX_Players_Name");
+
+            // Data seeding
+            builder.HasData([
+                new PlayerEntity {
+                    Id = 1, FirstName = "Della", LastName = "Duck", Pseudo = "MoonDuck"
+                },
+                new PlayerEntity {
+                    Id = 2, FirstName = "Balthazar", LastName = "Picsou", Pseudo = null
+                },
+                new PlayerEntity {
+                    Id = 3, FirstName = "Zaza", LastName = "Vanderquack", Pseudo = "TacticalPancake"
+                }
+            ]);
         }
     }
 }

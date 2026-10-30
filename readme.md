@@ -30,6 +30,8 @@ Application ASP.Net MVC	avec EFCore
 ```
 dotnet tool install --global dotnet-ef
 ```
+> [!IMPORTANT]
+> Cette installation est obligatoire pour faire du code first avec le CLI .Net
 
 #### Ajouter une migration
 Créer une nouvelle migration avec la méthode « Up » et « Down ».
@@ -37,7 +39,7 @@ Créer une nouvelle migration avec la méthode « Up » et « Down ».
 dotnet ef migrations add <MigrationName>
 ```
 
-Exemple depuis le dossier de la solution
+Exemple depuis un terminal dans le dossier de la solution
 ```
 dotnet ef migrations add --project "Demo_EFCore_02.DAL" --startup-project "Demo_EFCore_02" ExampleMigration
 ```
@@ -56,6 +58,11 @@ Si aucunne migration n'est précisé, elle cible la derniere créé.
 dotnet ef database update
 ---
 dotnet ef database update <MigrationName>
+```
+
+Exemple depuis un terminal dans le dossier de la solution
+```
+dotnet ef database update --project "Demo_EFCore_02.DAL" --startup-project "Demo_EFCore_02"
 ```
 
 ## Documentation
