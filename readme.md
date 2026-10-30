@@ -62,6 +62,7 @@ dotnet ef database update <MigrationName>
 - EFCore : https://learn.microsoft.com/en-us/ef/core/
 - Migrations : https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations/?tabs=dotnet-core-cli
 - Relations : https://learn.microsoft.com/en-us/ef/core/modeling/relationships
+- Seeding : https://learn.microsoft.com/en-us/ef/core/modeling/data-seeding
 
 ## Remarques
 - Les entités doivent toujours contenir un constructeur sans parametre
