@@ -54,9 +54,11 @@ Modifie la base de donnée en utilisation les méthodes « Up » et « Down ». 
 Si aucunne migration n'est précisé, elle cible la derniere créé. 
 ```
 dotnet ef database update
+---
 dotnet ef database update <MigrationName>
 ```
 
 ## Documentation
 - EFCore : https://learn.microsoft.com/en-us/ef/core/
 - Migrations : https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations/?tabs=dotnet-core-cli
+- Relations : https://learn.microsoft.com/en-us/ef/core/modeling/relationships
