@@ -11,6 +11,7 @@ namespace Demo_EFCore_02.DAL
 
         // Ensembles des tables de la DB
         public DbSet<PlayerEntity> Players { get; set; }
+        public DbSet<RaceEntity> Races { get; set; }
 
         // Application config
         protected override void OnModelCreating(ModelBuilder modelBuilder)
