@@ -41,6 +41,14 @@ namespace Demo_EFCore_02.DAL.Configs
                    .IsUnique()
                    .HasDatabaseName("IDX_Players_Name");
 
+            // Relation
+
+            // - One To Many avec Campaign
+            builder.HasMany(p => p.CampaignRuns)
+                .WithOne(ca => ca.Runner)
+                .HasForeignKey(ca => ca.RunnerId)
+                .IsRequired();
+
             // Data seeding
             builder.HasData([
                 new PlayerEntity {

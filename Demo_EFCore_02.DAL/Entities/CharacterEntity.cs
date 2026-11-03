@@ -21,5 +21,9 @@
         // Many to Many avec Specialization
         public ICollection<SpecializationEntity> Specializations { get; set; } = [];
 
+        // Many to Many avec Campaign
+        public ICollection<CampaignEntity> Campaigns { get; set; } = [];
+        public ICollection<CharacterParticipeEntity> CharacterParticipes { get; set; } = [];
+
     }
 }

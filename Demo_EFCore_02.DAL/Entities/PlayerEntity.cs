@@ -11,5 +11,8 @@
 
         // One to Many avec Character
         public ICollection<CharacterEntity> Characters { get; set; } = [];
+
+        // One to Many avec Campaign
+        public ICollection<CampaignEntity> CampaignRuns { get; set; } = [];
     }
 }

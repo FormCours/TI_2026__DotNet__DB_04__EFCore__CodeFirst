@@ -58,6 +58,11 @@ namespace Demo_EFCore_02.DAL.Configs
                 .WithMany()
                 .UsingEntity("SelectedSpecializations");
 
+
+            // - Many to Many : Characters / Campaign
+            builder.HasMany(c => c.Campaigns)
+                .WithMany(ca => ca.Characters)
+                .UsingEntity<CharacterParticipeEntity>();
         }
     }
 }
