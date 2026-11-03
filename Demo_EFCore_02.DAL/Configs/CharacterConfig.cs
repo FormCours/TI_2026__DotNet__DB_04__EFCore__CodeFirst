@@ -62,7 +62,16 @@ namespace Demo_EFCore_02.DAL.Configs
             // - Many to Many : Characters / Campaign
             builder.HasMany(c => c.Campaigns)
                 .WithMany(ca => ca.Characters)
-                .UsingEntity<CharacterParticipeEntity>();
+                .UsingEntity<CharacterParticipeEntity>(
+                    r => r.HasOne(ca => ca.Campaign)
+                        .WithMany(e => e.CharacterParticipes)
+                        .HasForeignKey(e => e.CampaignId)
+                        .OnDelete(DeleteBehavior.NoAction),
+                    l => l.HasOne(c => c.Character)
+                        .WithMany(e => e.CharacterParticipes)
+                        .HasForeignKey(e => e.CharacterId)
+                        .OnDelete(DeleteBehavior.NoAction)
+                );
         }
     }
 }

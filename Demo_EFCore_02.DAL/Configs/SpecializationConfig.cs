@@ -29,8 +29,7 @@ namespace Demo_EFCore_02.DAL.Configs
             builder.HasOne(s => s.Requirement)
                 .WithMany(s => s.SubSpecializations)
                 .HasForeignKey(s => s.RequirementId)
-                .IsRequired(false)
-                .OnDelete(DeleteBehavior.Cascade);
+                .IsRequired(false);
 
             // Data
             List<SpecializationEntity> specializations = [

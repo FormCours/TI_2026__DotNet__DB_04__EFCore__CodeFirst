@@ -10,8 +10,6 @@ namespace Demo_EFCore_02.DAL.Configs
         {
             builder.ToTable("CharacterParticipes");
 
-            builder.HasKey(cp => new { cp.CharacterId, cp.CampaignId });
-
             builder.Property(cp => cp.IsNPC)
                    .HasDefaultValue(false);
         }
