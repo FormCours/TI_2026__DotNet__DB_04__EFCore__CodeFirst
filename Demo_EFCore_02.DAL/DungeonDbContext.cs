@@ -13,6 +13,7 @@ namespace Demo_EFCore_02.DAL
         public DbSet<PlayerEntity> Players { get; set; }
         public DbSet<RaceEntity> Races { get; set; }
         public DbSet<SpecializationEntity> Specializations { get; set; }
+        public DbSet<CharacterEntity> Characters { get; set; }
 
         // Application config
         protected override void OnModelCreating(ModelBuilder modelBuilder)
